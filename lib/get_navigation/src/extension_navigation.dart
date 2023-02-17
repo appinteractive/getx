@@ -32,6 +32,7 @@ extension ExtensionBottomSheet on GetInterface {
     RouteSettings? settings,
     Duration? enterBottomSheetDuration,
     Duration? exitBottomSheetDuration,
+    Curve? curve,
   }) {
     return Navigator.of(overlayContext!, rootNavigator: useRootNavigator)
         .push(GetModalBottomSheetRoute<T>(
@@ -57,6 +58,7 @@ extension ExtensionBottomSheet on GetInterface {
           enterBottomSheetDuration ?? const Duration(milliseconds: 250),
       exitBottomSheetDuration:
           exitBottomSheetDuration ?? const Duration(milliseconds: 200),
+      curve: curve,
     ));
   }
 }
